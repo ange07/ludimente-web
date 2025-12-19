@@ -20,6 +20,59 @@
     --font-warmth: 'Lora', serif;
     --font-structure: 'Montserrat', sans-serif;
 }
+/* NAVBAR */
+nav {
+    background-color: #ffffff;
+    padding: 16px 40px;
+    box-shadow: 0 2px 8px rgba(74, 59, 69, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo span {
+    font-family: var(--font-warmth);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--piedra);
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--lila);
+}
 
 /* ESTILOS BASE */
 * {
@@ -75,6 +128,102 @@ main {
     padding: 40px 20px;
     max-width: 900px;
     margin: 0 auto;
+}
+section {
+    margin-bottom: 60px;    /* Espacio entre secciones */
+}
+
+h2 {
+    font-family: var(--font-warmth);
+    font-size: 2rem;
+    color: var(--terracota);
+    margin-bottom: 20px;
+}
+
+/* --- CARDS DE EQUIPO --- */
+.team-container {
+    display: flex;          /* Activa Flexbox */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 30px;              
+    flex-wrap: wrap;  
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 1px solid var(--lila-container);
+    border-radius: 12px;
+    padding: 25px;
+    flex: 1;               
+    min-width: 300px;    
+    max-width: 450px;    
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.card-header h3 {
+    color: var(--lila);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.rol {
+    display: block;
+    font-weight: 600;
+    color: var(--piedra);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.cedula {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* CARDS SERVICIOS */
+.services {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border: 2px solid var(--lila-container);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    text-align: left;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card:hover {
+    border-color: var(--lila);
+    box-shadow: 0 4px 16px rgba(177, 156, 217, 0.15);
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--piedra);
+}
+
+.service-card p {
+    text-align: left;
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.95rem;
 }
 
 /* BOTÓN PRIMARIO  */
