@@ -1,0 +1,60 @@
+/* Selector Universal para estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo de la página*/
+body {
+    background-color: #f9f7f2; /* Crema para fondo */
+    color: #4a4a4a;            /* Gris oscuro para texto */
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Estilos del header */
+header {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-bottom: 2px solid #eee;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+/* Estilos de main */
+main {
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Botón */
+button {
+    background-color: #8d68a5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #5a4b3c;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
