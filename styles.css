@@ -1,60 +1,109 @@
-/* Selector Universal para estilo base */
+/* VARIABLES CSS - Paleta de colores de Ludimente */
+:root {
+    /* Colores base */
+    --ivory: #FFFBF5;
+    --piedra: #4A3B45;
+    
+    /* Colores saturados (para botones, íconos) */
+    --lila: #B19CD9;
+    --terracota: #D69264;
+    --verde: #9CB686;
+    --amarillo: #F4D03F;
+    
+    /* Colores container (para fondos con texto) */
+    --lila-container: #E8E0F0;
+    --terracota-container: #F5E6DA;
+    --verde-container: #E5EDDF;
+    --amarillo-container: #FDF6DC;
+    
+    /* Tipografía */
+    --font-warmth: 'Lora', serif;
+    --font-structure: 'Montserrat', sans-serif;
+}
+
+/* ESTILOS BASE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Cuerpo de la página*/
 body {
-    background-color: #f9f7f2; /* Crema para fondo */
-    color: #4a4a4a;            /* Gris oscuro para texto */
-    font-family: sans-serif;
-    text-align: center;
+    background-color: var(--ivory); /*crema - ivory */
+    color: var(--piedra);           /*gris oscuro - piedra */
+    font-family: var(--font-structure); /* Montserrat por defecto*/
     line-height: 1.6;
+    text-align: center;
 }
 
-/* Estilos del header */
-header {
-    background-color: #ffffff;
-    padding: 50px 20px;
-    border-bottom: 2px solid #eee;
+/* TIPOGRAFÍA */
+h1, h2, h3 {
+    font-family: var(--font-warmth); /* Lora para títulos */
+    font-weight: 700;
 }
 
 h1 {
-    margin-bottom: 10px;
-}
-
-/* Estilos de main */
-main {
-    padding: 40px 20px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
-/* Botón */
+p {
+    font-family: var(--font-structure); /* Montserrat para cuerpo */
+    font-size: 1rem;
+}
+
+/* HEADER */
+header {
+    background-color: #ffffff; /* blanco puro */
+    padding: 50px 20px;
+    border-bottom: 2px solid var(--lila-container);
+}
+
+header p {
+    font-family: var(--font-warmth); /* eslogan en Lora */
+    font-style: italic;
+    color: var(--terracota);
+    font-size: 1.1rem;
+}
+
+/* MAIN */
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* BOTÓN PRIMARIO  */
 button {
-    background-color: #8d68a5;
-    color: white;
+    background-color: var(--lila);
+    color: var(--ivory);
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 28px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-structure);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    background-color: #5a4b3c;
+    background-color: #9F84C9; /* lila n poco más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(177, 156, 217, 0.3);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     padding: 20px;
     font-size: 0.9rem;
-    color: #888;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    color: var(--piedra);
+    opacity: 0.7;
+    margin-top: 60px;
+    border-top: 1px solid var(--lila-container);
 }
