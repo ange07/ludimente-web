@@ -80,7 +80,9 @@ nav {
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: var(--ivory); /*crema - ivory */
     color: var(--piedra);           /*gris oscuro - piedra */
@@ -89,25 +91,16 @@ body {
     text-align: center;
 }
 
-/* TIPOGRAFÍA */
+/* ESTILOS DE TIPOGRAFÍA GLOBAL */
 h1, h2, h3 {
-    font-family: var(--font-warmth); /* Lora para títulos */
+    font-family: var(--font-warmth);
     font-weight: 700;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1rem;
-}
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--terracota); }
+p { font-size: 1rem; }
+a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
 
 /* HEADER */
 header {
@@ -142,27 +135,44 @@ h2 {
 
 /* --- CARDS DE EQUIPO --- */
 .team-container {
-    display: flex;          /* Activa Flexbox */
-    justify-content: center; /* Centra las tarjetas */
-    gap: 30px;              
-    flex-wrap: wrap;  
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
 .team-card {
     background-color: #ffffff;
     border: 1px solid var(--lila-container);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 25px;
-    flex: 1;               
-    min-width: 300px;    
-    max-width: 450px;    
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     text-align: left;
+    
+    /* FLEXBOX IMAGEN Y TEXTO */
+    display: flex;
+    align-items: center; /* Alineación vertical centrada */
+    gap: 25px;
+    max-width: 800px; /* Ancho máximo*/
+}
+
+.card-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%; /* Foto redonda estilo perfil */
+    border: 3px solid var(--lila-container);
+    flex-shrink: 0;
+}
+
+/* Contenedor del texto*/
+.card-info {
+    flex: 1;
 }
 
 .card-header h3 {
     color: var(--lila);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 5px;
 }
 
@@ -170,20 +180,25 @@ h2 {
     display: block;
     font-weight: 600;
     color: var(--piedra);
-    margin-bottom: 15px;
-    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
 }
 
 .cedula {
     font-size: 0.9rem;
     color: #888;
-    margin-bottom: 10px;
     display: inline-block;
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
-
 /* CARDS SERVICIOS */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 .services {
     padding: 60px 20px;
     max-width: 1200px;
@@ -301,4 +316,19 @@ footer {
     opacity: 0.7;
     margin-top: 60px;
     border-top: 1px solid var(--lila-container);
+}
+/* MEDIA QUERY PARA MÓVILES */
+@media (max-width: 768px) {
+    .team-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .card-info {
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
 }

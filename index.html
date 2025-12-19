@@ -46,47 +46,55 @@
             <button>Agenda tu primera sesión</button>
         </section>
 
-        <!-- SOBRE NOSOTRAS -->
+    <!-- SOBRE NOSOTRAS -->
         <section id="nosotras" class="about">
             <h2>¿Quiénes somos?</h2>
-            <p class="section-intro">Somos un equipo de psicólogas especializadas en infancia y adolescencia en Mérida, Yucatán. Nuestra filosofía es <strong>"Estructura Cálida"</strong>: combinar técnicas científicas con empatía genuina. No estamos aquí solo para escuchar, estamos para darte herramientas concretas que funcionen desde la primera semana.</p>
+            <p class="section-intro">Somos un equipo de psicólogas especializadas en infancia y adolescencia en Mérida, Yucatán.</p>
             
             <div class="team-container">
                 <!-- Card Psicóloga Angélica -->
                 <article class="team-card">
-                    <img src="./src/images/Angelica.png"
-                        alt="Fotografía de Angélica Chin, psicóloga educativa.">
-                    <div class="card-header">
-                        <h3>Psic. Angélica del Carmen Chin Cantillo</h3>
-                        <span class="rol">Maestra en Psicología Escolar</span>
-                    </div>
-                    <div class="card-body">
-                        <p class="cedula">Céd. Lic. 12843922 | Céd. Mtría. 15234161</p>
-                        <p>Especialista en necesidades específicas de aprendizaje. Mi enfoque utiliza el juego como herramienta para desarrollar habilidades socioemocionales en un ambiente seguro y divertido.</p>
+                    <img src="./src/img/Angelica.png"
+                        alt="Fotografía de Angélica Chin" class="card-image">
+                    
+                    <!-- NUEVO: Agrupamos todo el texto en un div para usar Flexbox correctamente -->
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Psic. Angélica del Carmen Chin Cantillo</h3>
+                            <span class="rol">Maestra en Psicología Escolar</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="cedula">Céd. Lic. 12843922 | Céd. Mtría. 15234161</p>
+                            <p>Especialista en necesidades específicas de aprendizaje. Mi enfoque utiliza el juego como herramienta para desarrollar habilidades socioemocionales.</p>
+                        </div>
                     </div>
                 </article>
 
                 <!-- Card Psicóloga María Teresa -->
                 <article class="team-card">
-                    <img src="./src/images/Maria_Teresa.png"
-                        alt="Fotografía de María Teresa Castillo Vega, psicóloga clínica.">
-                    <div class="card-header">
-                        <h3>Psic. María Teresa Castillo Vega</h3>
-                        <span class="rol">Maestra en Psicoterapia Cognitivo Conductual</span>
-                    </div>
-                    <div class="card-body">
-                        <p class="cedula">Céd. Lic. 5594513 | Céd. Mtría. 14560134</p>
-                        <p>Especialista clínica. Mi objetivo es brindar herramientas prácticas para manejar pensamientos y emociones, logrando que la escuela y el hogar sean espacios felices.</p>
+                    <img src="./src/img/Maria_Teresa.png"
+                        alt="Fotografía de María Teresa Castillo" class="card-image">
+                    
+                    <div class="card-info">
+                        <div class="card-header">
+                            <h3>Psic. María Teresa Castillo Vega</h3>
+                            <span class="rol">Maestra en Psicoterapia Cognitivo Conductual</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="cedula">Céd. Lic. 5594513 | Céd. Mtría. 14560134</p>
+                            <p>Especialista clínica. Mi objetivo es brindar herramientas prácticas para manejar pensamientos y emociones.</p>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
 
+
         <!-- SERVICIOS -->
         <section id="servicios" class="services">
             <h2>¿En qué te podemos ayudar?</h2>
-            
+         <div class="services-grid"> <!-- Contenedor grid para cards -->
             <div class="service-card">
                 <h3>Terapia Cognitivo Conductual (TCC)</h3>
                 <p>Trabajamos con berrinches intensos, miedos, ansiedad, tristeza y dificultades para regular emociones. Usamos técnicas adaptadas a la edad de tu hijo.</p>
@@ -104,8 +112,9 @@
 
             <div class="service-card">
                 <h3>Orientación a Padres</h3>
-                <p>A veces lo más difícil es saber <em>cómo</em> ayudar. Te enseñamos estrategias prácticas para manejar situaciones del día a día con firmeza y amor.</p>
+                <p>A veces lo más difícil es saber <em>cómo</em> ayudar. Te enseñamos estrategias prácticas para manejar situaciones del día a día.</p>
             </div>
+        </div>
         </section>
 
         
@@ -113,7 +122,7 @@
         <section id="contacto" class="cta">
             <h2>¿Listo para dar el primer paso?</h2>
             <p>Estamos en Francisco de Montejo II, Mérida. Escríbenos por WhatsApp o llámanos para agendar tu primera cita.</p>
-            <button>Contactar por WhatsApp</button>
+            <button>Contactar por WhatsApp</button>    
         </section>
 
     </main>
