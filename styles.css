@@ -53,8 +53,8 @@ h2 {
 }
 
 p {
-    font-family: var(--font-structure); /* Montserrat para cuerpo */
     font-size: 1rem;
+    /* La fuente ya se hereda del body
 }
 
 /* HEADER */
@@ -97,6 +97,53 @@ button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(177, 156, 217, 0.3);
 }
+/* ENLACES */
+
+a {
+    color: var(--terracota);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--lila);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--lila);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+/* FORMULARIOS */
+button,
+input,
+textarea,
+select {
+    font-family: inherit; /* Fuerza la herencia de estilo de tipografía Montserrat */
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* Estilos base para inputs */
+input,
+textarea {
+    padding: 10px 14px;
+    border: 2px solid var(--lila-container);
+    border-radius: 6px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--lila);
+    box-shadow: 0 0 0 3px rgba(177, 156, 217, 0.15);
+}
+
 
 /* FOOTER */
 footer {
