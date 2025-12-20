@@ -317,6 +317,71 @@ footer {
     margin-top: 60px;
     border-top: 1px solid var(--lila-container);
 }
+/* --- BANNER DE COOKIES --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--piedra);
+    color: var(--ivory);
+    padding: 15px 20px;
+    
+    /* Flexbox para alinear texto izquierda y botones derecha */
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    
+    z-index: 2000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    border-top: 1px solid var(--lila);
+    animation: slideUp 0.5s ease-out;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para botones del banner */
+.cookie-banner button {
+    margin-top: 0;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+/* Botón Aceptar */
+.btn-primary {
+    background-color: var(--verde);
+    color: var(--piedra);
+    border: 1px solid var(--verde);
+}
+
+.btn-primary:hover {
+    background-color: #8BA375;
+}
+
+/* Botón Rechazar ghost */
+.btn-ghost {
+    background-color: transparent;
+    color: var(--ivory);
+    border: 1px solid var(--ivory);
+}
+
+.btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
 /* MEDIA QUERY PARA MÓVILES */
 @media (max-width: 768px) {
     .team-card {
