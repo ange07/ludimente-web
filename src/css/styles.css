@@ -448,17 +448,70 @@ footer {
     background-color: rgba(255, 255, 255, 0.1);
 }
 /* MEDIA QUERY PARA MÓVILES */
+/* Boton hamburguesa - oculto en desktop */
+.nav-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--piedra);
+}
+
+/* TABLET Y MÓVIL */
 @media (max-width: 768px) {
-    .team-card {
-        flex-direction: column;
-        text-align: center;
-    }
     
-    .card-info {
-        text-align: center;
+    /* Navbar Móvil */
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: block; /* Muestra el botón hamburguesa en movil */
     }
 
     .nav-links {
         display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        text-align: center;
+        background-color: #ffffff;
+        padding-bottom: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    /* Clase para mostrar menú con JS */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Ajustes de Tipografía */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+
+    /* Hero */
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    /* Cards en Columna */
+    .team-container, 
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card, 
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ajustes de Formulario */
+    .contact-section {
+        padding: 40px 15px;
     }
 }
