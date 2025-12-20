@@ -306,6 +306,71 @@ textarea:focus {
     border-color: var(--lila);
     box-shadow: 0 0 0 3px rgba(177, 156, 217, 0.15);
 }
+.contact-section {
+    background-color: var(--lila-container);
+    padding: 60px 20px;
+    border-radius: 16px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--piedra);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--lila);
+    box-shadow: 0 0 0 3px rgba(177, 156, 217, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--terracota);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #c07a4d;
+}
+
 
 
 /* FOOTER */
