@@ -39,3 +39,21 @@ if(cookieReject) {
         console.log("Cookies rechazadas");
     });
 }
+// --- LÓGICA DE MENÚ MÓVIL ---
+const navToggle = document.querySelector("#navToggle");
+const navLinks = document.querySelector("#navLinks");
+
+
+//activa menu al hacer click en el boton hamburguesa
+if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Cierra menu
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+}
